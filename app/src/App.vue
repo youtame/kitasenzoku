@@ -4,24 +4,9 @@ import Main from './components/Main.vue'
 import About from './components/About.vue'
 import Applications from './components/Applications.vue'
 import Footer from './components/Footer.vue'
-import { ref, onMounted } from 'vue'
+import { useTheme } from './composables/useTheme'
 
-const isDark = ref(false)
-
-onMounted(() => {
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-  isDark.value = mediaQuery.matches
-
-  const body = document.body
-
-  if (isDark.value) body.classList.add('dark')
-
-  mediaQuery.addEventListener('change', e => {
-    isDark.value = e.matches
-    if (e.matches) body.classList.add('dark')
-    else body.classList.remove('dark')
-  })
-})
+const { isDark } = useTheme()
 </script>
 
 <template>

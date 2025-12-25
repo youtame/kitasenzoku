@@ -2,11 +2,25 @@
     <header>
         <h1>102℃</h1>
         <nav class="right">
-        <a href="#about">About</a>
-        <a href="#application">App</a>
+            <a href="#about">About</a>
+            <a href="#application">App</a>
+            <button class="mode" @click="toggleTheme" aria-label="Toggle theme">
+                <template v-if="theme === 'light'">
+                    <p>Dark</p>
+                </template>
+                <template v-else>
+                    <p>Light</p>
+                </template>
+            </button>
         </nav>
     </header>
 </template>
+
+<script setup>
+import { useTheme } from '../composables/useTheme'
+
+const { theme, toggleTheme } = useTheme()
+</script>
 
 <style scoped>
 
@@ -28,7 +42,15 @@ h1 {
     gap: 30px;
 }
 
-a {
+button {
+    background: none;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font: inherit;
+}
+
+a, button{
     color: var(--text-main);
     padding: 14px 28px;
     border-radius: 20px;
@@ -37,7 +59,7 @@ a {
     box-shadow: var(--shadow-A);
     transition: var(--transition);
 }
-a:hover {
+a:hover, button:hover {
     box-shadow: var(--shadow-A-hover);
     transform: translateY(-2px);
 }
@@ -68,8 +90,12 @@ a:hover {
 
 }
 
-.dark a {
+.dark a, .dark button {
     box-shadow: none;
     outline: 2px solid;
+}
+
+.dark a:hover, button:hover {
+    box-shadow: none;
 }
 </style>

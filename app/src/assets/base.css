@@ -18,6 +18,12 @@
   --transition: all 0.3s ease;
 }
 
+body {
+  transition:
+      background-color 0.1s ease,
+      color 0.1s ease;
+}
+
 .dark {
   background-color: #111;
   color: #fff;
