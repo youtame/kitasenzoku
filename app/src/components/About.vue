@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import aboutphoto from '@/assets/photo/about.jpg'
+import aboutphoto from "@/assets/photo/about.jpg";
 </script>
 
 <template>
     <h1 id="about">About</h1>
 
     <div class="about-main">
-        <p>102℃ is a website developed by a team of front-end developers and passionate coders. It also brings together many other creative professionals who contribute to building unique web experiences.</p>
+        <p>
+            102℃ is a website developed by a team of front-end developers and
+            passionate coders. It also brings together many other creative
+            professionals who contribute to building unique web experiences.
+        </p>
         <img :src="aboutphoto" alt="about photo" />
     </div>
 </template>
 
 <style lang="css" scoped>
-
 h1 {
     margin: auto;
     padding: 50px;
@@ -23,29 +26,29 @@ h1 {
 }
 
 .about-main {
-    display: flex;       
-    align-items: center;  
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     max-width: 1050px;
     border-radius: 25px;
     margin: auto;
     gap: 20px;
-    box-shadow: var(--shadow-B);              
+    box-shadow: var(--shadow-B);
 }
 
 .about-main p {
-    width: 50%;     
-    max-width: 500px; 
+    width: 50%;
+    max-width: 500px;
     font-size: 30px;
     text-align: justify;
-    line-height: 2; 
+    line-height: 2;
     margin: 30px 0px 30px 30px;
 }
 
 .about-main img {
     margin: 30px 30px 30px 0px;
-    width: 40%;              
-    max-width: 500px;   
+    width: 40%;
+    max-width: 500px;
     border-radius: 25px;
 }
 
@@ -105,7 +108,7 @@ h1 {
     }
 }
 
-.dark .about-main  {
+.dark .about-main {
     box-shadow: none;
     outline: 2px solid;
 }

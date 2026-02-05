@@ -1,10 +1,9 @@
 <template>
     <footer class="site-footer">
-        <p>&copy; 2025&nbsp;102℃</p>
+        <p>&copy; 2026&nbsp;102℃</p>
     </footer>
 </template>
 <style scoped>
-
 .site-footer {
     margin: 80px auto 0;
     padding: 20px 20px;
@@ -30,5 +29,4 @@
 .dark .site-footer p {
     color: #aaa;
 }
-
 </style>

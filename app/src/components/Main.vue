@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import mainphoto from '@/assets/photo/main.jpg'
+import { ref, onMounted } from "vue";
+import mainphoto from "@/assets/photo/main.jpg";
 
-const show = ref(false)
+const show = ref(false);
 
 onMounted(() => {
     setTimeout(() => {
-        show.value = true
-    }, 150)
-})
+        show.value = true;
+    }, 150);
+});
 </script>
 
 <template>
     <Transition name="slide-up" appear>
-        <h1 v-if="show">Anything we imagine<br>we create</h1>
+        <h1 v-if="show">Anything we imagine<br />we create</h1>
     </Transition>
 
     <Transition name="slide-up" appear>
@@ -22,7 +22,6 @@ onMounted(() => {
 </template>
 
 <style lang="css" scoped>
-
 h1 {
     margin: auto;
     padding: 50px;
@@ -30,6 +29,7 @@ h1 {
     text-align: center;
     font-size: 80px;
     max-width: 1050px;
+    letter-spacing: 0.2rem;
 }
 
 img {
@@ -71,5 +71,4 @@ img {
 .dark h1 {
     color: inherit;
 }
-
 </style>
